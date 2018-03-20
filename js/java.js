@@ -29,6 +29,18 @@ $(function () {
         smartSpeed: 700,
         loop: true,
         autoplayHoverPause: true,
+        responsive: 
+        {
+            0:{
+                items: 1
+            },
+            480: {
+                items: 2
+            },
+            760: {
+                items: 3
+            }
+        }
 
     });
 });
@@ -72,6 +84,21 @@ $(function () {
         smartSpeed: 700,
         loop: true,
         autoplayHoverPause: true,
+        responsive: 
+        {
+            0:{
+                items: 1
+            },
+            480: {
+                items: 3
+            },
+            760: {
+                items: 5
+            },
+            992:{
+                items: 6
+            }
+        }
 
     });
 });
@@ -104,4 +131,12 @@ $(function () {
         }, 1250, "easeInOutExpo");
     })
 
+});
+
+/*close mobile menu on clcik*/
+$(function () {
+   $(".navbar-collapse ul li a").on("click touch", function(){
+       
+       $(".navbar-toggle").click();
+   });
 });
